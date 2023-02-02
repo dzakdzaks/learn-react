@@ -16,9 +16,50 @@ function App() {
               setRole(e.target.value);
             }}
           />
-          <Employee name="Dzaky" role="Senior Engineer" />
-          <Employee name="Brod" role={role} />
-          <Employee name="Jak" />
+          <div className="flex flex-wrap justify-center">
+            <Employee
+              name="John"
+              role="Senior Engineer"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Carl"
+              role={role}
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Tom"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="John"
+              role="Senior Engineer"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Carl"
+              role={role}
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Tom"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="John"
+              role="Senior Engineer"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Carl"
+              role={role}
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+            <Employee
+              name="Tom"
+              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            />
+          </div>
         </>
       ) : (
         <p>You cant see employees</p>
