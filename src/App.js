@@ -1,9 +1,42 @@
 import "./index.css";
 import Employee from "./components/Employee.js";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [role, setRole] = useState("Engineer");
+  const [employees, setEmployees] = useState([
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+    {
+      name: "Caleb",
+      role: "Developer",
+      img: "https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    },
+  ]);
   const showEmployees = true;
   return (
     <div className="App">
@@ -17,48 +50,16 @@ function App() {
             }}
           />
           <div className="flex flex-wrap justify-center">
-            <Employee
-              name="John"
-              role="Senior Engineer"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Carl"
-              role={role}
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Tom"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="John"
-              role="Senior Engineer"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Carl"
-              role={role}
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Tom"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="John"
-              role="Senior Engineer"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Carl"
-              role={role}
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-            <Employee
-              name="Tom"
-              img="https://images.pexels.com/photos/399772/pexels-photo-399772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
+            {employees.map((employee) => {
+              return (
+                <Employee
+                  key={uuidv4()}
+                  name={employee.name}
+                  role={employee.role}
+                  img={employee.img}
+                />
+              );
+            })}
           </div>
         </>
       ) : (
